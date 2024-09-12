@@ -16,7 +16,8 @@ public class ArrayCrud {
         addElementToEnd(20);
 
         System.out.println(Arrays.toString(arr));
-        System.out.println("Array element count : "+arrElementCount);
+        addElementToIndex(2, 4);
+        System.out.println(Arrays.toString(arr));
     }
 
     private static String addElementToEnd(int element) {
@@ -32,5 +33,15 @@ public class ArrayCrud {
             }
         }
         return msg;
+    }
+
+    private static void addElementToIndex(int element, int index) {
+        if(arrElementCount < ARRAY_SIZE) {
+            for(int i = arrElementCount-1; i >= index; i--) {
+                arr[i+1]=arr[i];
+            }
+            arr[index]=element;
+            arrElementCount++;
+        }
     }
 }
