@@ -11,13 +11,19 @@ public class ArrayCrud {
     public static void main(String[] args) {
         addElementToEnd(5);
         addElementToEnd(10);
-        addElementToEnd(20);
-        addElementToEnd(20);
-        addElementToEnd(20);
+        addElementToEnd(30);
+        addElementToEnd(40);
+        addElementToEnd(50);
 
         System.out.println(Arrays.toString(arr));
-        addElementToIndex(2, 4);
+        System.out.println("arrElementCount : "+arrElementCount);
+        //addElementToIndex(2, 4);
+        //System.out.println(Arrays.toString(arr));
+
+        deleteElement(40);
+        deleteElement(5);
         System.out.println(Arrays.toString(arr));
+        System.out.println("arrElementCount : "+arrElementCount);
     }
 
     private static String addElementToEnd(int element) {
@@ -42,6 +48,30 @@ public class ArrayCrud {
             }
             arr[index]=element;
             arrElementCount++;
+        }
+    }
+
+    public static void deleteElement(int element) {
+        int idx = -1;
+        int arrLength = arrElementCount;
+        for (int i=0; i<arrLength; i++){
+            if(arr[i] == element) {
+                idx = i;
+            }
+        }
+        //element found
+        if(idx != -1) {
+            if(idx == (arrElementCount-1)) {
+                arr[idx] = 0;
+                arrElementCount--;
+            }
+            else{
+                for(int i=idx; i<arrElementCount-1; i++) {
+                    arr[i] = arr[i+1];
+                }
+                arr[arrElementCount-1] = 0;
+                arrElementCount--;
+            }
         }
     }
 }
