@@ -22,7 +22,7 @@ public class ArrayBasic {
 
     /**
      * remove provided element from the array.
-     * it will also output relevant message. -- sujoy
+     * it will also output relevant message. --
      */
     private static void removeElement(int[] arr, int elementToRemove) {
         int index = -1;
