@@ -8,11 +8,11 @@ public class TwoSum {
         int[] nums = {2,3,3,15};
         int target = 6;
 
-        int[] arr = twoSum(nums, target);
+        int[] arr = twoSumBruteForce(nums, target);
         System.out.println(Arrays.toString(arr));
     }
 
-    public static int[] twoSum(int[] nums, int target) {
+    public static int[] twoSumBruteForce(int[] nums, int target) {
         int[] arr = new int[2];
         int arrLength = nums.length;
         for(int i=0; i<arrLength-1; i++) {
