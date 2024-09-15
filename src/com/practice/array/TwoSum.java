@@ -14,10 +14,15 @@ public class TwoSum {
         //int[] arr = twoSumHashMap(nums, target);
         //int[] arr = twoSumTwoPointer(nums, target);
         int[] arr = twoSumBinarySearch(nums, target);
+        int[] arr = twoSumBruteForce(nums, target);
         System.out.println(Arrays.toString(arr));
     }
 
-    public static int[] twoSum(int[] nums, int target) {
+    /**
+     * This is the brute force approach.
+     * complexity O(n^2)
+     */
+    public static int[] twoSumBruteForce(int[] nums, int target) {
         int[] arr = new int[2];
         int arrLength = nums.length;
         for(int i=0; i<arrLength-1; i++) {
