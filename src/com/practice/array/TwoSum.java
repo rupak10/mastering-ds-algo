@@ -13,7 +13,7 @@ public class TwoSum {
         //int[] arr = twoSum(nums, target);
         //int[] arr = twoSumHashMap(nums, target);
         //int[] arr = twoSumTwoPointer(nums, target);
-        int[] arr = twoSumBinarySearch(nums, target);
+        //int[] arr = twoSumBinarySearch(nums, target);
         int[] arr = twoSumBruteForce(nums, target);
         System.out.println(Arrays.toString(arr));
     }
