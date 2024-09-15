@@ -12,6 +12,10 @@ public class TwoSum {
         System.out.println(Arrays.toString(arr));
     }
 
+    /**
+     * This is the brute force approach.
+     * complexity O(n^2)
+     */
     public static int[] twoSumBruteForce(int[] nums, int target) {
         int[] arr = new int[2];
         int arrLength = nums.length;
