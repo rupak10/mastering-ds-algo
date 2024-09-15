@@ -13,7 +13,7 @@ public class TwoSum {
         //int[] arr = twoSum(nums, target);
         //int[] arr = twoSumHashMap(nums, target);
         //int[] arr = twoSumTwoPointer(nums, target);
-        int[] arr = towSumBinarySearch(nums, target);
+        int[] arr = twoSumBinarySearch(nums, target);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -85,7 +85,7 @@ public class TwoSum {
      * Binary search approach
      * Complexity : O(nlogn)
      */
-    private static int[] towSumBinarySearch(int[] nums, int target) {
+    private static int[] twoSumBinarySearch(int[] nums, int target) {
         int[][] numsWithIndices = new int[nums.length][2];
         int arrLength = nums.length;
         for(int i=0; i<arrLength; i++) {
