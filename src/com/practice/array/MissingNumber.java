@@ -9,8 +9,8 @@ public class MissingNumber {
     private static int missingNumber(int[] nums) {
         int arrLength = nums.length;
         int sum = (arrLength*(arrLength + 1))/2;
-        for (int i = 0; i < arrLength; i++) {
-            sum -= nums[i];
+        for (int num : nums) {
+            sum -= num;
         }
         return sum;
     }
